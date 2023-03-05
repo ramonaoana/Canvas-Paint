@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <script defer src="1_1089_OANA_ANDREEA_RAMONA.js"></script>
+    <link rel="stylesheet" href="1_1089_OANA_ANDREEA_RAMONA.css">
+</head>
+
+<body>
+    <h1>Microsoft Paint</h1>
+    <div class="container">
+        <div class="list">
+            <div class="listaFiguri">
+                <p>Lista figuri:</p>
+                <ul id="lista"></ul>
+            </div>
+
+            <div class="properties">
+                <p>Proprietati</p>
+                <label for="coordX1"> X1:</label>
+                <input type="text" id="dimX1" name="coordX1"><br><br>
+                <label for="coordY1"> Y1:</label>
+                <input type="text" id="dimY1" name="coordY1"><br><br>
+                <label for="coordX2"> X2:</label>
+                <input type="text" id="dimX2" name="coordX2"><br><br>
+                <label for="coordY2"> Y2:</label>
+                <input type="text" id="dimY2" name="coordY2"><br><br>
+                <label for="raza"> Raza:</label>
+                <input type="text" id="dimRaza" name="raza"><br><br>
+                <input type="button" id="btnModifica" value="Modifica">
+                <input type="button" id="btnSterge" value="Sterge">
+            </div>
+        </div>
+
+        <div class="canvas">
+            <canvas id="canvasPaint" width="900" height="630"></canvas>
+        </div>
+        <div class="tools">
+            <p>Instrumente</p>
+            <label for="shapesLabel">Alege o figura:</label>
+
+            <select id="shapesOptions" name="shapes">
+                <option value="linie">Linie</option>
+                <option value="dreptunghi">Dreptunghi</option>
+                <option value="cerc">Cerc</option>
+                <option value="elipsa">Elipsa</option>
+                <option value="triunghi">Triunghi</option>
+            </select> <br><br>
+
+            <label for="colorPicker">Selecteaza culoare:</label>
+            <input type="color" id="colorpicker" value="#0000ff">
+            <br><br>
+
+            <div style="display: flex; justify-content:center;">
+                <input type="checkbox" value="fill" name="type" onclick="unchecked(this)" checked />Fill
+                <input type="checkbox" value="outline" name="type" onclick="unchecked(this)" />Outline
+            </div>
+            <br>
+
+            <label for="colorPickerBackground">Culoare background:</label>
+            <input type="color" id="colorPickerBackground" value="#ffffff">
+            <br><br>
+
+            <label for="dim">Grosime linie:</label>
+            <input type="range" min="1" max="10" value="1" id="grosime">
+
+            <br><br>
+
+            <button id="clear" type="button">Clear</button>
+            <a id="downloadPNG"><button id="exportPNG" type="button">Export format raster</button></a>
+
+            <a id="downloadSVG"><button id="exportSVG" type="button">Export format vectorial</button></a>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
