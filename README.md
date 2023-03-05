@@ -1,6 +1,5 @@
-# Canvas-
+# Program de desenare raster folosind elementul canvas
 
-Program de desenare raster folosind elementul canvas
 
 Descriere: Permite utilizatorului să deseneze folosind un element de tip canvas și să exporte rezultatul final în format
 raster și / sau vectorial.
